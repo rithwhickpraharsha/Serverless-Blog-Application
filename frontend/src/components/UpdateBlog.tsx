@@ -15,15 +15,13 @@ const Update_Blog = ({title_initial,content_initial,tag_initial,blog_id}:props_p
     console.log(tag_initial);
     const [title,setTitle] = useState(title_initial);
     const [content,setContent] = useState(content_initial);
-    const [tags,setTags] = useState(tag_initial);
     const navigate = useNavigate();
     async function publish(){
 
     try{
-        const Tag = tags.split(',');
-        const send = {title:title,content:content,author:`${localStorage.getItem('Medium-Blog-Application')}`,tags:Tag};
+        const send = {title:title,content:content,author:`${localStorage.getItem('Medium-Blog-Application')}`};
         const res = await axios.put(`https://backend.rithwhickpraharshags.workers.dev/api/v1/blog/${blog_id}`,send,{headers:{Authorization:`Bearer ${localStorage.getItem('Medium-Blog-Application')}`}});
-        console.log(Tag);
+       
         toast.success(res.data.success);
         setTimeout(()=>{navigate('/blog')},2000);
 

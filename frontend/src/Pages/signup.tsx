@@ -1,4 +1,3 @@
-import {signup_user} from '@rithwhickpraharsha/medium-common';
 import Quote from '../components/Quote';
 import Signup_outer from "../components/Signup_outer"
 

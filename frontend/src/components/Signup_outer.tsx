@@ -17,6 +17,7 @@ export default function Signup_outer(){
         const info:signup_user = {Email:Email,Username:username,Password:pass};
         console.log(info);
         const res = await axios.post('https://backend.rithwhickpraharshags.workers.dev/api/v1/signup',info);
+        console.log(res);
         toast.success("Sign up successfull");
         setTimeout(()=>{navigate("/blog");},3000);
         }
