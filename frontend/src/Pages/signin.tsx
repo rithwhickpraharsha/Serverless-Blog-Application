@@ -1,9 +1,17 @@
 
 import Signin_outer from '../components/Signin_outer';
 import Quote from '../components/Quote';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Signin(){
-
+    const navigate  = useNavigate();
+    useEffect(()=>{
+        const item = localStorage.getItem('Medium-Blog-Application');
+        if(!item){
+          navigate('/');
+        }
+    },[])
   
 
 

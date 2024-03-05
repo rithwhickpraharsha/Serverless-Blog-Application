@@ -1,9 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import Quote from '../components/Quote';
 import Signup_outer from "../components/Signup_outer"
+import { useEffect } from 'react';
 
 
 export default function Signup(){
-    
+    const navigate  = useNavigate();
+    useEffect(()=>{
+        const item = localStorage.getItem('Medium-Blog-Application');
+        if(!item){
+          navigate('/');
+        }
+    },[])
 
     return (
         <div>
