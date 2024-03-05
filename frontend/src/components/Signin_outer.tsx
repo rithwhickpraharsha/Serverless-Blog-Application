@@ -15,7 +15,7 @@ export default function Signin_outer(){
         const token = res.data.success;
         localStorage.setItem('Medium-Blog-Application',token);
         toast.success("Sign in successfull");
-        setTimeout(()=>{navigate("/blog");},3000);
+        setTimeout(()=>{navigate("/");},3000);
         }
         catch(err:any){
             console.log(err.response.data.error);
