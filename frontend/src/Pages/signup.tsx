@@ -8,7 +8,7 @@ export default function Signup(){
     const navigate  = useNavigate();
     useEffect(()=>{
         const item = localStorage.getItem('Medium-Blog-Application');
-        if(!item){
+        if(item){
           navigate('/');
         }
     },[])

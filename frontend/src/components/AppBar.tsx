@@ -13,7 +13,7 @@ export default function AppBar(){
            <div className="mr-10">
             <button className="bg-green-500 rounded-lg p-2 hover:bg-green-800 m-2 " onClick={()=>{navigate("/blog/publish");}}>Publish</button>
             <button className="bg-green-500 rounded-lg p-2 hover:bg-green-800 m-2 " onClick={()=>{navigate("/blog/yours")}}>Update</button>
-            <button className="bg-red-500 rounded-lg p-2 hover:bg-red-800 m-2 " onClick={()=>{localStorage.removeItem('Medium-Blog-Apllication');navigate("/")}}>Logout</button>
+            <button className="bg-red-500 rounded-lg p-2 hover:bg-red-800 m-2 " onClick={()=>{localStorage.removeItem('Medium-Blog-Application');navigate("/"); }}>Logout</button>
 
             <Avator name={"me"} />
             
