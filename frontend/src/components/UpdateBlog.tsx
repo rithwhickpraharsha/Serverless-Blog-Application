@@ -23,7 +23,7 @@ const Update_Blog = ({title_initial,content_initial,tag_initial,blog_id}:props_p
         const res = await axios.put(`https://backend.rithwhickpraharshags.workers.dev/api/v1/blog/${blog_id}`,send,{headers:{Authorization:`Bearer ${localStorage.getItem('Medium-Blog-Application')}`}});
        
         toast.success(res.data.success);
-        setTimeout(()=>{navigate('/blog')},2000);
+        setTimeout(()=>{navigate('/')},2000);
 
 
     }

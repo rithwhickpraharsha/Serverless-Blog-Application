@@ -23,7 +23,7 @@ const Publish_Blog = ({title_initial,content_initial,tag_initial}:props_publish)
         const send = {title:title,content:content,author:`${localStorage.getItem('Medium-Blog-Application')}`,tags:Tag};
         const res = await axios.post('https://backend.rithwhickpraharshags.workers.dev/api/v1/blog',send,{headers:{Authorization:`Bearer ${localStorage.getItem('Medium-Blog-Application')}`}});
         toast.success(res.data.success);
-        setTimeout(()=>{navigate('/blog')},2000);
+        setTimeout(()=>{navigate('/')},2000);
 
 
     }
